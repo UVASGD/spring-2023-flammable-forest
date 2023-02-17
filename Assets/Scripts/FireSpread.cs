@@ -1,43 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FireSpread : MonoBehaviour
 {
 
-    private SpriteRenderer sr;
+    //private SpriteRenderer sr;
 
     public float aReduction = 0.001f;
     public float lifeTime = 3f;
-    GameObject tree;
+    public GameObject tree;
+
 
     private float lifeStart;
 
-    bool justLit;
-    bool onFire;
-    bool putOut;
+    public bool onFire;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        sr = GetComponent<SpriteRenderer>();
+        //sr = GetComponent<SpriteRenderer>();
         lifeStart = Time.time;
-        tree = GameObject.FindGame
+  
     }
 
     // Update is called once per frame
     void Update()
     {
-        void
-        if(collision.gameObject.name == "Arsonist"){
-            onFire = true;
-        }
+        
         if (Time.time >= lifeStart + lifeTime)
         {
             Destroy(gameObject);
         }
-        sr.color = new Color(sr.color.r, sr.color.g, sr.color.g, sr.color.a - aReduction);
+        //sr.color = new Color(sr.color.r, sr.color.g, sr.color.g, sr.color.a - aReduction);
     }
+    
+        
 }
