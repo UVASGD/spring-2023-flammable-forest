@@ -31,12 +31,21 @@ public class FireSpread : MonoBehaviour
     void Update()
     {
         
-        if (Time.time >= lifeStart + lifeTime)
+        /*if (Time.time >= lifeStart + lifeTime)
         {
             Destroy(gameObject);
-        }
+        }*/
         //sr.color = new Color(sr.color.r, sr.color.g, sr.color.g, sr.color.a - aReduction);
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Arsonist")
+        {
+            onFire = true;
+        }
         
+    }
+
+
 }
