@@ -10,12 +10,9 @@ public class FireSpread : MonoBehaviour
 
     public float aReduction = 0.001f;
     public float lifeTime = 3f;
-    public GameObject tree;
 
 
     private float lifeStart;
-
-    public bool onFire;
 
 
     // Start is called before the first frame update
@@ -38,11 +35,13 @@ public class FireSpread : MonoBehaviour
         //sr.color = new Color(sr.color.r, sr.color.g, sr.color.g, sr.color.a - aReduction);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.name == "Arsonist")
+        
+        if (collider.gameObject.tag == "Tree")
         {
-            onFire = true;
+            collider.gameObject.GetComponent<TreeClass>().onFire = true;
+
         }
         
     }
