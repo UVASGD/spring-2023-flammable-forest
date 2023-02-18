@@ -11,6 +11,9 @@ public class FireSpread : MonoBehaviour
     public float aReduction = 0.001f;
     public float lifeTime = 3f;
 
+    
+    
+
 
     private float lifeStart;
 
@@ -21,12 +24,14 @@ public class FireSpread : MonoBehaviour
 
         //sr = GetComponent<SpriteRenderer>();
         lifeStart = Time.time;
+        
   
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         
         /*if (Time.time >= lifeStart + lifeTime)
         {
@@ -37,14 +42,17 @@ public class FireSpread : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        
-        if (collider.gameObject.tag == "Tree")
-        {
-            collider.gameObject.GetComponent<TreeClass>().onFire = true;
-
-        }
-        
+        setFire(collider);  
     }
 
 
+    private void setFire(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Tree")
+        {
+            collider.gameObject.GetComponent<TreeClass>().onFire = true;
+            collider.gameObject.GetComponent<TreeClass>().timer = 0;
+        }
+    }
+    
 }
