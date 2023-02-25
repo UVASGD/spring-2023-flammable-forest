@@ -12,8 +12,6 @@ public class FireSpread : MonoBehaviour
     public float lifeTime = 3f;
 
     
-    
-
 
     private float lifeStart;
 
@@ -51,7 +49,7 @@ public class FireSpread : MonoBehaviour
         if (collider.gameObject.tag == "Tree")
         {
             collider.gameObject.GetComponent<TreeClass>().onFire = true;
-            collider.gameObject.GetComponent<TreeClass>().timer = 0;
+            collider.gameObject.GetComponent<TreeClass>().burnTimer = 0;
         }
     }
     

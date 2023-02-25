@@ -8,7 +8,7 @@ public class TreeClass : MonoBehaviour
     public bool onFire;
     public bool putOut;
 
-    public float timer = 0f;
+    public float burnTimer = 0f;
     public float burnTime = 2f;
 
     private SpriteRenderer sr;
@@ -25,8 +25,8 @@ public class TreeClass : MonoBehaviour
     void Update()
     {
         
-        timer += Time.deltaTime;
-        if (timer > burnTime)
+        burnTimer += Time.deltaTime;
+        if (burnTimer > burnTime)
         {
             extinguish();
         }
@@ -44,7 +44,7 @@ public class TreeClass : MonoBehaviour
 
     private void extinguish()
     {
-        if (timer > burnTime)
+        if (burnTimer > burnTime)
         {
             onFire = false;
             putOut = true;
