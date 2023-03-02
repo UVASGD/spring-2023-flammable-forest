@@ -40,13 +40,13 @@ public class PlayerMovement : MonoBehaviour
         {
             GameObject f = Instantiate(firePrefab, transform.position, Quaternion.identity);
             Rigidbody2D r = f.GetComponent<Rigidbody2D>();
-            r.velocity = new Vector3(1, 0.3f + Random.RandomRange(-0.15f,0.15f),0) * fireSpeed;
+            r.velocity = new Vector3(1, 0.3f + Random.Range(-0.15f,0.15f),0) * fireSpeed;
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
             GameObject f = Instantiate(firePrefab, transform.position, Quaternion.identity);
             Rigidbody2D r = f.GetComponent<Rigidbody2D>();
-            r.velocity = new Vector3(1, 0.3f + Random.RandomRange(-0.15f, 0.15f), 0) * fireSpeed;
+            r.velocity = new Vector3(1, 0.3f + Random.Range(-0.15f, 0.15f), 0) * fireSpeed;
             SpriteRenderer sr =f.GetComponent<SpriteRenderer>();
             sr.color = new Color(0, 50, 1);
         }
