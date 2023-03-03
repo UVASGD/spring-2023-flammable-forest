@@ -23,10 +23,10 @@ public class Fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= lifeStart + lifeTime)
+/*        if (Time.time >= lifeStart + lifeTime)
         {
             Destroy(gameObject);
         }
-        sr.color = new Color(sr.color.r, sr.color.g, sr.color.g, sr.color.a - aReduction);
+        sr.color = new Color(sr.color.r, sr.color.g, sr.color.g, sr.color.a - aReduction);*/
     }
 }
