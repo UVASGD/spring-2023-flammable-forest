@@ -7,7 +7,6 @@ public class Tree : MonoBehaviour
     private int state;
     private Animator anim;
     private Fuel fuel;
-    private bool burnedDown;
 
     public int contacts;
 
@@ -22,10 +21,10 @@ public class Tree : MonoBehaviour
     void Update()
     {
         int oldState = state;
-        state = 0;
-        if (fuel.burning && !burnedDown) state = 1;
-        if (fuel.burning && burnedDown) state = 2;
-        if (!fuel.burning && burnedDown) state = 3;
+        if (fuel.burning && !fuel.burnedOut) state = 1;
+        else if (fuel.burning && fuel.burnedOut) state = 2;
+        else if (!fuel.burning && fuel.burnedOut) state = 3;
+        else state = 0;
         if (state != oldState) anim.SetInteger("State", state);
 
         contacts = fuel.boxToBoxContacts.Count + fuel.circleToBoxContacts.Count + fuel.circleToCircleContacts.Count;

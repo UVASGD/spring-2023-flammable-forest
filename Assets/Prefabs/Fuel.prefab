@@ -144,6 +144,7 @@ MonoBehaviour:
   spreadHighChance: 0.2
   spreadMidChance: 0.02
   spreadLowChance: 0.002
+  lifetime: 10
 --- !u!1 &6237026214124506979
 GameObject:
   m_ObjectHideFlags: 0

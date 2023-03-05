@@ -6,8 +6,10 @@ using static Unity.VisualScripting.Dependencies.Sqlite.SQLite3;
 public class Fuel : MonoBehaviour
 {
     public bool burning = false;
+    private float timeBurned = 0;
     public bool burnedOut = false;
     public float spreadHighChance = 0.2f, spreadMidChance = 0.02f, spreadLowChance = 0.002f;
+    public float lifetime = 50;
 
     //it would be inefficient to use onTriggerStay2D, instead store all contacts in a list
     //only refer to this fuels contacts with other fuels boxes, the other fuels circle doesn't affect transmission
@@ -25,6 +27,14 @@ public class Fuel : MonoBehaviour
     void Update()
     {
         transmitFire();
+        if (burning)
+        {
+            timeBurned += Time.deltaTime;
+            if (timeBurned > lifetime)
+            {
+                burnedOut = true;
+            }
+        }
     }
 
     private void transmitFire()
@@ -58,7 +68,6 @@ public class Fuel : MonoBehaviour
 
     public void exitCollision(char myType, Fuel col, char colType)
     {
-        Debug.Log("ljdja;lsk");
         if (myType == 'b' && colType == 'b') boxToBoxContacts.Remove(col);
         if (myType == 'c' && colType == 'b') circleToBoxContacts.Remove(col);
         if (myType == 'c' && colType == 'c') circleToCircleContacts.Remove(col);

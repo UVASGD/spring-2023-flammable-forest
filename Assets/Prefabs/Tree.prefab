@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7153906421780323569}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.363803, y: -0.5453844, z: 0.11888261}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -196,16 +196,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6237026214026933471, guid: d6aba128bd0af45549915b53edfc1204, type: 3}
+      propertyPath: lifetime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237026214026933471, guid: d6aba128bd0af45549915b53edfc1204, type: 3}
       propertyPath: spreadLowChance
-      value: 50
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 6237026214026933471, guid: d6aba128bd0af45549915b53edfc1204, type: 3}
       propertyPath: spreadMidChance
-      value: 50
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6237026214026933471, guid: d6aba128bd0af45549915b53edfc1204, type: 3}
       propertyPath: spreadHighChance
-      value: 50
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6237026214124507006, guid: d6aba128bd0af45549915b53edfc1204, type: 3}
       propertyPath: m_Radius
