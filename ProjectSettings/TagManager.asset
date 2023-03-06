@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fire
-  - Tree
-  - Water
+  - Fuel
   layers:
   - Default
   - TransparentFX
@@ -46,6 +44,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1719219979
+    locked: 0
+  - name: Trees
+    uniqueID: 3445012739
     locked: 0
   - name: Player
     uniqueID: 2969725569
