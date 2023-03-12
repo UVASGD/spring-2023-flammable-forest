@@ -77,4 +77,9 @@ public class Fuel : MonoBehaviour
     {
         burning = true;
     }
+
+    public void putOut()
+    {
+        burning = false;
+    }
 }
