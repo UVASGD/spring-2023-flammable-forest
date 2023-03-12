@@ -27,6 +27,13 @@ public class FuelCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //water
+        if (collision.gameObject.tag == "Water")
+        {
+            transform.parent.GetComponent<Fuel>().putOut();
+        }
+
+        //fuel
         if (collision.gameObject.tag != "Fuel") return;
         if (collision.gameObject.transform.parent == transform.parent) return;
         //notify if collided with a fuel collider
