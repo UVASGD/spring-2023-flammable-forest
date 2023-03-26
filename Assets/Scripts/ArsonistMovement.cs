@@ -9,7 +9,7 @@ public class ArsonistMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponentInChildren<Fuel>().enabled = false;
     }
 
     // Update is called once per frame
@@ -27,5 +27,14 @@ public class ArsonistMovement : MonoBehaviour
         }
 
         transform.position += moveSpeed * transform.up * Time.deltaTime;
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            GetComponentInChildren<Fuel>().enabled = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponentInChildren<Fuel>().enabled = true;
+        }
     }
 }

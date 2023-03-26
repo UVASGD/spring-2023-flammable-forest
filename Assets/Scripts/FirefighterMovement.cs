@@ -6,11 +6,12 @@ public class FirefighterMovement : MonoBehaviour
 {
     public float speed;
     public float fireSpeed;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -34,6 +35,16 @@ public class FirefighterMovement : MonoBehaviour
             dPos += new Vector3(1, 0, 0);
         }
 
-        transform.position += dPos.normalized * speed * 0.01f;
+        //movement
+        rb.AddForce(dPos.normalized * speed);
+        if (dPos == new Vector3(0, 0, 0))
+        {
+            rb.AddForce(-0.999f * rb.velocity);
+        }
+        else
+        {
+            rb.AddForce(rb.velocity * -0.5f);
+        }
+        //transform.position += dPos.normalized * speed * 0.01f;
     }
 }
