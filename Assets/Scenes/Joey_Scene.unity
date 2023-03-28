@@ -2825,6 +2825,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5021914769086359805, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
+      propertyPath: decay
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021914769086359805, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021914769086359805, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
+      propertyPath: rotateSpeed
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021914769086359805, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
+      propertyPath: baseRotateSpeed
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021914769086359805, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
+      propertyPath: highRotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5021914769086359806, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
       propertyPath: m_Name
       value: Arsonist
