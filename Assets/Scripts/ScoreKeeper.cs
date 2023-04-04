@@ -32,4 +32,8 @@ public class ScoreKeeper : MonoBehaviour
         return (float) firemanScoringTrees / trees.Length;
 
     }
+
+    public bool FiremanIsWinning(){
+        return firemanScore >= .5f;
+    }
 }

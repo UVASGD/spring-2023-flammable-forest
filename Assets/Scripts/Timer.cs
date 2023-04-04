@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -8,6 +9,8 @@ public class Timer : MonoBehaviour
     [SerializeField] TMP_Text timerText;
     [SerializeField] float currentTime;
     [SerializeField] float startTime;
+
+    public Action timeUpAction;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +21,12 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime = Mathf.Max(currentTime - Time.deltaTime, 0);
-        updateTimerTextUI();
+        if  (currentTime != 0){
+            currentTime = Mathf.Max(currentTime - Time.deltaTime, 0);
+            updateTimerTextUI();
+            if (currentTime == 0) 
+                timeUpAction.Invoke();
+        }
     }
 
     void updateTimerTextUI(){
@@ -28,9 +35,5 @@ public class Timer : MonoBehaviour
         string formattedTime = string.Format("{0:0}:{1:00}", minutes, seconds);
  
         timerText.text = formattedTime; 
-    }
-
-    public bool timerOver(){
-        return currentTime == 0;
     }
 }
