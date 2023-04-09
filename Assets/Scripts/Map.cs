@@ -7,7 +7,7 @@ public class Map : MonoBehaviour
 {
     public Tilemap tiles;
     public Tile switchTile;
-    private Sprite player;
+    [SerializeField] private GameObject player;
     //public Sprite player;
     void Start(){
         //originTile = Instantiate(tiles.GetTile(new Vector3Int(0,0,0)));
@@ -18,7 +18,7 @@ public class Map : MonoBehaviour
     {
         //Color colour = Color.red;//new Color(255.0f, 95.0f, 31.0f);
         
-        Vector3Int position = Vector3Int.FloorToInt(GameObject.Find("Player").transform.position);
+        Vector3Int position = Vector3Int.FloorToInt(player.transform.position);
         //tiles.SetTileFlags(position, TileFlags.None);
 
         tiles.SetTile(position, switchTile);
