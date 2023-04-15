@@ -29,16 +29,22 @@ public class Tree : MonoBehaviour
         else state = 0;
         if (state != oldState) anim.SetInteger("State", state);
 
+        checkSparkState();
+
+    }
+
+    private void checkSparkState()
+    {
         if (fuel.burning && !sparksOn)
         {
             sparks.play();
             sparksOn = true;
-        } else if (!fuel.burning && sparksOn)
+        }
+        else if (!fuel.burning && sparksOn)
         {
             sparks.stop();
             sparksOn = false;
         }
-
     }
 
 }
