@@ -7,14 +7,16 @@ public class Tree : MonoBehaviour
     private int state;
     private Animator anim;
     private Fuel fuel;
+    private Sparks sparks;
 
-    public int contacts;
+    bool sparksOn = false;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        fuel = GetComponentInChildren<Fuel>();
+        fuel = GetComponent<Fuel>();
+        sparks = GetComponentInChildren<Sparks>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,16 @@ public class Tree : MonoBehaviour
         else state = 0;
         if (state != oldState) anim.SetInteger("State", state);
 
-        contacts = fuel.boxToBoxContacts.Count + fuel.circleToBoxContacts.Count + fuel.circleToCircleContacts.Count;
+        if (fuel.burning && !sparksOn)
+        {
+            sparks.play();
+            sparksOn = true;
+        } else if (!fuel.burning && sparksOn)
+        {
+            sparks.stop();
+            sparksOn = false;
+        }
+
     }
 
 }
