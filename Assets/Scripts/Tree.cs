@@ -7,8 +7,10 @@ public class Tree : MonoBehaviour
     private int state;
     private Animator anim;
     private Fuel fuel;
-
     public int contacts;
+
+    public bool burning => fuel.burning; 
+
 
     // Start is called before the first frame update
     void Start()
