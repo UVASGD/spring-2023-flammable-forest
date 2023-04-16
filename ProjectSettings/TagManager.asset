@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Water
   - Burnable
+  - Tree
   layers:
   - Default
   - TransparentFX

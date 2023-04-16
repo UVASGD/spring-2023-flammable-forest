@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5021914769086359804}
   - component: {fileID: 5021914769086359807}
   - component: {fileID: 5021914769086359805}
+  - component: {fileID: 788806257}
+  - component: {fileID: 788806256}
   m_Layer: 8
   m_Name: Arsonist
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.7422924, y: 5.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6634757186024890801}
   m_Father: {fileID: 0}
@@ -98,12 +100,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b7d3c6a6c914edd89b6281540ff9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 160
-  moveSpeed: 10
-  baseRotateSpeed: 160
-  highRotateSpeed: 500
-  extraSpeed: 0
-  decay: 0.98
+  rotateSpeed: 30
+  moveSpeed: 70
+  startLinDrag: 5
+  maxLinDrag: 7
+  treeDrag: 4
+  baseRotateSpeed: 100
+  highRotateSpeed: 100
+--- !u!50 &788806257
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5021914769086359806}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 7
+  m_AngularDrag: 10
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &788806256
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5021914769086359806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5773587}
+      - {x: -0.5, y: -0.28866667}
+      - {x: 0.5, y: -0.28866667}
 --- !u!1001 &5083845594343485926
 PrefabInstance:
   m_ObjectHideFlags: 0
