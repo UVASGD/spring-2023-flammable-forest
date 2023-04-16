@@ -7,7 +7,7 @@ public class Tree : MonoBehaviour
     private int state;
     private Animator anim;
     private Fuel fuel;
-    private Sparks sparks;
+    private Sparks sparks1, sparks2;
 
     bool sparksOn = false;
 
@@ -16,7 +16,8 @@ public class Tree : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         fuel = GetComponent<Fuel>();
-        sparks = GetComponentInChildren<Sparks>();
+        sparks1 = GetComponentsInChildren<Sparks>()[0];
+        sparks2 = GetComponentsInChildren<Sparks>()[1];
     }
 
     // Update is called once per frame
@@ -37,12 +38,14 @@ public class Tree : MonoBehaviour
     {
         if (fuel.burning && !sparksOn)
         {
-            sparks.play();
+            sparks1.play();
+            sparks2.play();
             sparksOn = true;
         }
         else if (!fuel.burning && sparksOn)
         {
-            sparks.stop();
+            sparks1.stop();
+            sparks2.stop();
             sparksOn = false;
         }
     }

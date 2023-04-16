@@ -2774,79 +2774,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d65988fb58f4f85b9796f11e6ae32d, type: 3}
---- !u!1001 &1917994833490162831
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1917994834849484886, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: fireProbability
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.1644166
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.22817607
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.10957609
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484888, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484888, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: TriggerModule.primitives.Array.data[0]
-      value: 
-      objectReference: {fileID: 2045243249}
-    - target: {fileID: 1917994834849484890, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_Name
-      value: EmberEffect
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917994834849484890, guid: b80756bea826142588bf7310d026976e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b80756bea826142588bf7310d026976e, type: 3}
 --- !u!1001 &5021914769371304594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2860,7 +2787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5021914769086359804, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.7422924
+      value: -10.48
       objectReference: {fileID: 0}
     - target: {fileID: 5021914769086359804, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2988,6 +2915,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 146061474}
     m_Modifications:
+    - target: {fileID: 475027331668783581, guid: f8d65988fb58f4f85b9796f11e6ae32d, type: 3}
+      propertyPath: burning
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7153906421780323569, guid: f8d65988fb58f4f85b9796f11e6ae32d, type: 3}
       propertyPath: m_Name
       value: Tree
