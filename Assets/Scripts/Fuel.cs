@@ -25,13 +25,14 @@ public class Fuel : MonoBehaviour
             if (timeBurned > lifetime)
             {
                 burnedOut = true;
-                burning = false;
+                //burning = false;
             }
         }
     }
 
     public void catchFire()
     {
+        if (burnedOut) return;
         burning = true;
     }
 
@@ -39,4 +40,5 @@ public class Fuel : MonoBehaviour
     {
         burning = false;
     }
+
 }

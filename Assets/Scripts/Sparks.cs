@@ -24,8 +24,8 @@ public class Sparks : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        //burnable filter in particle settings
-        if (Random.Range(0f,1f) < fireProbability)
+        // filters in particle settings
+        if (Random.Range(0f,1f) < fireProbability)  //burnable
         {
             other.GetComponentInChildren<Fuel>().catchFire();
         }

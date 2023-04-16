@@ -50,4 +50,13 @@ public class Tree : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.layer);
+        if (collision.gameObject.layer == 4)
+            {
+                fuel.putOut();
+            }
+    }
+
 }

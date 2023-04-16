@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7153906421780323582}
   - component: {fileID: 4784129212292492406}
   - component: {fileID: 475027331668783581}
+  - component: {fileID: 8170906120001336124}
   m_Layer: 6
   m_Name: Tree
   m_TagString: Untagged
@@ -170,6 +171,39 @@ MonoBehaviour:
   burning: 0
   burnedOut: 0
   lifetime: 20
+--- !u!60 &8170906120001336124
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7153906421780323569}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.0042995187, y: 0.52752316}
+      - {x: -0.09838286, y: 0.40890232}
+      - {x: -0.28813076, y: -0.00086310506}
+      - {x: -0.45183432, y: -0.4051045}
+      - {x: -0.43119195, y: -0.43119198}
+      - {x: 0.011462688, y: -0.5206425}
+      - {x: 0.45183432, y: -0.40539488}
+      - {x: 0.11123836, y: 0.4105495}
 --- !u!1001 &5977523581810616670
 PrefabInstance:
   m_ObjectHideFlags: 0

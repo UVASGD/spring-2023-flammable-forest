@@ -3803,7 +3803,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 1
     primitives:
-    - {fileID: 0}
+    - {fileID: 1917994834849484887}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -4827,3 +4827,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireProbability: 0.3
+  waterSpray: {fileID: 0}
