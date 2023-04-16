@@ -7,13 +7,11 @@ public class ArsonistMovement : MonoBehaviour
     public float rotateSpeed = 1, moveSpeed = 1;
     public float baseRotateSpeed = 160, highRotateSpeed = 250, extraSpeed, decay;
 
-    //Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponentInChildren<Fuel>().enabled = false;
-        //rb.GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
