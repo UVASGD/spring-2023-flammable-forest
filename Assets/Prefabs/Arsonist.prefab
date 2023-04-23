@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b7d3c6a6c914edd89b6281540ff9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 30
+  rotateSpeed: 20
   moveSpeed: 70
   startLinDrag: 5
   maxLinDrag: 7

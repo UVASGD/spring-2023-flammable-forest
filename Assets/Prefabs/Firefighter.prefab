@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spraying: 0
-  waterForce: 3
+  waterForce: 5
 --- !u!61 &5126254852874475744
 BoxCollider2D:
   m_ObjectHideFlags: 0
