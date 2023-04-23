@@ -11,6 +11,9 @@ public class Tree : MonoBehaviour
 
     bool sparksOn = false;
 
+    public bool burning => fuel.burning; 
+
+
     // Start is called before the first frame update
     void Start()
     {
