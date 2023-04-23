@@ -4,37 +4,55 @@ using UnityEngine;
 
 public class ArsonistMovement : MonoBehaviour
 {
-    public float rotateSpeed = 1, moveSpeed = 1;
+    public float rotateSpeed = 1, moveSpeed = 1, startLinDrag = 7, maxLinDrag = 9, treeDrag = 15;
+    public float baseRotateSpeed = 160, highRotateSpeed = 250;
+
+    Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponentInChildren<Fuel>().enabled = false;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //more linear drag while turning
+        rb.drag = (maxLinDrag) - (maxLinDrag-startLinDrag) / (Mathf.Abs(rb.angularVelocity) + 1);
+
+
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(rotateSpeed * new Vector3(0, 0, 1) * Time.deltaTime);
+            rb.AddTorque(rotateSpeed);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(-1 * rotateSpeed * new Vector3(0, 0, 1) * Time.deltaTime);
+            rb.AddTorque(-1*rotateSpeed);
         }
 
-        transform.position += moveSpeed * transform.up * Time.deltaTime;
+        rb.AddForce(moveSpeed * transform.up);
 
+        
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            GetComponentInChildren<Fuel>().enabled = false;
+            GetComponent<Fuel>().burning = false;
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GetComponentInChildren<Fuel>().enabled = true;
+            GetComponent<Fuel>().burning = true;
+        }
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "tree")
+        {
+            rb.AddForce(-1 * rb.velocity.normalized * treeDrag);
         }
     }
+
 }
