@@ -33189,6 +33189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arsonist
       objectReference: {fileID: 0}
+    - target: {fileID: 6634757186024890812, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
 --- !u!1001 &5126254851201688218
