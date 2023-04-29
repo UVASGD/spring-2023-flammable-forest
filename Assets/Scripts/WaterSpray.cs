@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireSpray : MonoBehaviour
+public class WaterSpray : MonoBehaviour
 {
     // private SpriteRenderer sr;
     // private BoxCollider2D col;

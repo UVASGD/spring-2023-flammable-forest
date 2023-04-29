@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ArsonistMovement : MonoBehaviour
 {
-    public float speed;
-    public float fireSpeed;
-    private Rigidbody2D rb;
+    public float rotateSpeed = 1, moveSpeed = 1, startLinDrag = 7, maxLinDrag = 9, treeDrag = 15;
+    public float baseRotateSpeed = 160, highRotateSpeed = 250;
+
+    Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,34 +19,40 @@ public class ArsonistMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 dPos = new Vector3(0, 0, 0);
-        if (Input.GetKey(KeyCode.UpArrow))
+        //more linear drag while turning
+        rb.drag = (maxLinDrag) - (maxLinDrag-startLinDrag) / (Mathf.Abs(rb.angularVelocity) + 1);
+
+
+        if (Input.GetKey(KeyCode.A))
         {
-            dPos += new Vector3(0, 1, 0);
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            dPos += new Vector3(0, -1, 0);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            dPos += new Vector3(-1, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            dPos += new Vector3(1, 0, 0);
+            rb.AddTorque(rotateSpeed);
         }
 
-        //movement
-        rb.AddForce(dPos.normalized * speed);
-        if (dPos == new Vector3(0, 0, 0))
+        if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(-0.999f * rb.velocity);
+            rb.AddTorque(-1*rotateSpeed);
         }
-        else
+
+        rb.AddForce(moveSpeed * transform.up);
+
+        
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            rb.AddForce(rb.velocity * -0.5f);
+            GetComponent<Fuel>().burning = false;
         }
-        //transform.position += dPos.normalized * speed * 0.01f;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Fuel>().burning = true;
+        }
+
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "tree")
+        {
+            rb.AddForce(-1 * rb.velocity.normalized * treeDrag);
+        }
+    }
+
 }
