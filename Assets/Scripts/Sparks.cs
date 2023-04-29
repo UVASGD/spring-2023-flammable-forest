@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sparks : MonoBehaviour
 {
-    [SerializeField] float fireProbability = 0.05f;
+    [SerializeField] float fireProbability;
     private ParticleSystem ps;
 
     private void Start()

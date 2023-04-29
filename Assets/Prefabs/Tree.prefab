@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!95 &7153906421780323582
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,7 +122,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!60 &4784129212292492406
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -211,6 +211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7153906421780323581}
     m_Modifications:
+    - target: {fileID: 1917994834849484886, guid: b80756bea826142588bf7310d026976e, type: 3}
+      propertyPath: fireProbability
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1917994834849484887, guid: b80756bea826142588bf7310d026976e, type: 3}
       propertyPath: m_RootOrder
       value: 0
