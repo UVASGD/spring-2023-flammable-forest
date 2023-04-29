@@ -33255,6 +33255,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 146061474}
     m_Modifications:
+    - target: {fileID: 475027331668783581, guid: f8d65988fb58f4f85b9796f11e6ae32d, type: 3}
+      propertyPath: burning
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7153906421780323569, guid: f8d65988fb58f4f85b9796f11e6ae32d, type: 3}
       propertyPath: m_Name
       value: Tree
