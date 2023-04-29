@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5126254851731330444}
   - component: {fileID: 5126254851731330447}
-  - component: {fileID: 5126254851731330435}
   - component: {fileID: 544110362}
+  - component: {fileID: 1264123613753882009}
   m_Layer: 8
   m_Name: Firefighter
   m_TagString: Untagged
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5126254851731330435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5126254851731330446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf41f699cd65a44c2abfdc60dfc8b821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  fireSpeed: 1
 --- !u!50 &544110362
 Rigidbody2D:
   serializedVersion: 4
@@ -121,3 +107,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1264123613753882009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126254851731330446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39bd525c18564d5aadd76cdcd394176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireSpeed: 7
