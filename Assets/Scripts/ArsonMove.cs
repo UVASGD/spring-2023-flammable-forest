@@ -7,6 +7,7 @@ public class ArsonMove : MonoBehaviour
     public float speed;
     public float fireSpeed;
     private Rigidbody2D rb;
+    public float stopdragK, startdragK;
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +40,11 @@ public class ArsonMove : MonoBehaviour
         rb.AddForce(dPos.normalized * speed);
         if (dPos == new Vector3(0, 0, 0))
         {
-            rb.AddForce(-0.999f * rb.velocity);
+            rb.AddForce(-1 * stopdragK * rb.velocity * Mathf.Pow(rb.velocity.magnitude, 0.5f));
         }
         else
         {
-            rb.AddForce(rb.velocity * -0.5f);
+            rb.AddForce(rb.velocity * Mathf.Pow(rb.velocity.magnitude,3) / (rb.velocity.magnitude + 1) * -1 * startdragK);
         }
         //transform.position += dPos.normalized * speed * 0.01f;
     }
