@@ -151,13 +151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9424f1d946656704c9426a9f5bd12cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 20
-  moveSpeed: 70
-  startLinDrag: 5
-  maxLinDrag: 7
-  treeDrag: 4
-  baseRotateSpeed: 100
-  highRotateSpeed: 100
+  rotateSpeed: 17
+  moveSpeed: 90
+  startLinDrag: 6
+  maxLinDrag: 9
+  treeDrag: 0
+  baseRotateSpeed: 80
+  highRotateSpeed: 80
   waterSprayNozzle: {fileID: 5004064397041074093}
 --- !u!114 &55009589725442456
 MonoBehaviour:
@@ -818,7 +818,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3822,7 +3822,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 1
