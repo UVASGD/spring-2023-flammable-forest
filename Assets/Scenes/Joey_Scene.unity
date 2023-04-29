@@ -33187,7 +33187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5021914769086359806, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
       propertyPath: m_Name
-      value: Arsonist
+      value: Plane
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45c4c5e2874d4f9da7509d92914224f, type: 3}
@@ -33244,7 +33244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5126254851731330446, guid: 2e4749485a30a4815a8fb745cc7c7973, type: 3}
       propertyPath: m_Name
-      value: Firefighter
+      value: Arsonist
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e4749485a30a4815a8fb745cc7c7973, type: 3}
