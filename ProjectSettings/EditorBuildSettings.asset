@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 37af5c5363179af4194037be46b763e7
   - enabled: 1
-    path: Assets/Scenes/Apr9Meet.unity
-    guid: 2df74952232fc439e8f53720cfdb537f
+    path: Assets/Scenes/Joey_Scene.unity
+    guid: 697dfffa7006747ba910857caf28d259
   m_configObjects: {}
