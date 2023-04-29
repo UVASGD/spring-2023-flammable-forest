@@ -4826,4 +4826,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b94768e4d9c46d09bfd9edfaba40dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireProbability: 0.3
+  fireProbability: 0.1
