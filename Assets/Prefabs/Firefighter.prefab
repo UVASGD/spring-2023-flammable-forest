@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 5126254851731330447}
   - component: {fileID: 544110362}
   - component: {fileID: 1264123613753882009}
+  - component: {fileID: 3784869679389143784}
+  - component: {fileID: 544110361}
   m_Layer: 8
   m_Name: Firefighter
-  m_TagString: Untagged
+  m_TagString: Gas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +126,47 @@ MonoBehaviour:
   fireSpeed: 7
   stopdragK: 4
   startdragK: 0.01
+--- !u!61 &3784869679389143784
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126254851731330446}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000004172325, y: -0.025449097}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7, y: 3.52}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3172232, y: 3.1637068}
+  m_EdgeRadius: 0
+--- !u!114 &544110361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126254851731330446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de228eff0efb4843be58332890ffe73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterFillTransform: {fileID: 0}
+  tankCapacity: 1
+  currentTank: 0.5
 --- !u!1 &7410007915347197364
 GameObject:
   m_ObjectHideFlags: 0
