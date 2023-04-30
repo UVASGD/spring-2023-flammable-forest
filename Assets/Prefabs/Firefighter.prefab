@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 8293193265492633404}
   - component: {fileID: 4093870489055732918}
   - component: {fileID: 5330984394874505291}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Gasoline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3797,10 +3797,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
@@ -3970,7 +3970,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 128
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

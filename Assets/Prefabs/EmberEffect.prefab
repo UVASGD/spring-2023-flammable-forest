@@ -3786,7 +3786,7 @@ ParticleSystem:
     radiusScale: 0.3
     collidesWith:
       serializedVersion: 2
-      m_Bits: 80
+      m_Bits: 592
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4827,3 +4827,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireProbability: 0.1
+  explosion: {fileID: 643375062873849838, guid: d57fbae7f6479406b87bdeef08229d57, type: 3}
