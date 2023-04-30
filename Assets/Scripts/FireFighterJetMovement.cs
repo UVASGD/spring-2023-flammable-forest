@@ -42,8 +42,6 @@ public class FireFighterJetMovement : MonoBehaviour
             {
                 turned = true;
 
-                Debug.Log(transform.position);
-                Debug.Log(rb.rotation);
                 if (position.y < lowBound || position.y > highBound)
                 {
                     rb.rotation = 180 - rb.rotation;

@@ -46,8 +46,9 @@ public class WaterSprayNozzle : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if(other.TryGetComponent<Fuel>(out Fuel fuel)) 
+        if(other.TryGetComponent<Fuel>(out Fuel fuel))
+        {
             fuel.putOut();
-
+        }
     }
 }

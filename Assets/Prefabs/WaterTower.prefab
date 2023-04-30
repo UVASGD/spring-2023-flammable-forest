@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsToFill: 1
+  gasFill: 0.5
 --- !u!58 &220327522077037842
 CircleCollider2D:
   m_ObjectHideFlags: 0
