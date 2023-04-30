@@ -31,8 +31,6 @@ public class Sparks : MonoBehaviour
             other.GetComponentInChildren<Fuel>().catchFire();
         }
 
-        Debug.Log(other.tag);
-
         if (other.layer == 9)  //gasoline
         {
             Debug.Log("here");

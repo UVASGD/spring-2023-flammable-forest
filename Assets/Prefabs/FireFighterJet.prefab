@@ -151,9 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9424f1d946656704c9426a9f5bd12cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 17
-  moveSpeed: 90
-  startLinDrag: 6
+  rotateSpeed: 15
+  moveSpeed: 120
+  startLinDrag: 8
   maxLinDrag: 9
   treeDrag: 0
   baseRotateSpeed: 80
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterFillTransform: {fileID: 0}
   tankCapacity: 1
-  currentTank: 1
+  currentTank: 0
 --- !u!95 &5021914769922673555
 Animator:
   serializedVersion: 5

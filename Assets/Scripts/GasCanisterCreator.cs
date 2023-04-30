@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GasCanisterCreator : MonoBehaviour
 {
-    public int maxGasCanisters = 4;
+    public int maxGasCanisters = 7;
     public GameObject gasCan;
-    public float top = 10f, bottom = -10f, left = -20f, right = 20f;
+    public float top = 115f, bottom = 0f, left = 0f, right = 193f;
     public float spawnChance = 0.01f;
 
     // Start is called before the first frame update

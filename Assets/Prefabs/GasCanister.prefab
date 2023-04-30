@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsToFill: 1
-  gasFill: 0.1
+  gasFill: 0.21
 --- !u!61 &8874162933756259812
 BoxCollider2D:
   m_ObjectHideFlags: 0
